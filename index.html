@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="logoicon.ico" />
+    <title>TMT Painting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css" title="external style sheet">
+    <link rel="stylesheet" href="lato.css" title="external style sheet">
+    <link rel="stylesheet" href="./ajax.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/magnific.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./icon.css">
+    <link rel="stylesheet" href="./w33.css">
+    <link rel="stylesheet" href="./mystylesheet.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div style="float:right;color:#FF9671;">
+        CALL US: 403-333-3334
+    </div>
+    <br />
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <img src="images/logo.png" />
+        </div>
+    </div>
+    <!-- Navbar (sit on top) -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div class="topnav" id="myTopnav">
+        <a class="w3-bar-item w3-button" onclick="openSearch()">
+            <img src="images/logo.png" style="width:100px;height:100px;" />
+            <br />
+        </a>
+        <a> <b>TMT Painting</b></a>
+        <a href="#projects"><b>Projects</b></a>
+        <a href="#contact"><b>Free Estimate </b></a>
+        <a href="#testimonial"><b>Testimonials</b></a>
+        <a href="about.html"><b>About</b></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <br />
+    <div>
+        <img src="images/logoc.jpg" />
+    </div>
+    <h3 id="projects" class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>PROJECTS</b></h3>
+    <div class="w3-content w3-container w3-padding-16">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('interior')"><b style="color:#008E9B"> Interior Painting</b></button>
+            <button class="btn " onclick="filterSelection('exterior')"><b style="color:#008E9B"> Exterior Painting</b></button>
+            <button class="btn " onclick="filterSelection('com')"> <b style="color:#008E9B">Commercial</b></button>
+            <button class="btn " onclick="filterSelection('stucco')"><b style="color:#008E9B"> Stucco</b></button>
+            <button class="btn " onclick="filterSelection('concrete')"><b style="color:#008E9B"> Concrete</b></button>
+        </div>
+
+        <div class="column interior">
+            <div class="w3-content w3-display-container">
+                <img class="mySlides1" src="images/interior2.jpg" style="width:100%">
+                <img class="mySlides1" src="images/wood2.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior1.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior3.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior4.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior5.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior6.jpeg" style="width:100%">
+                <img class="mySlides1" src="images/interior7.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior8.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior9.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior10.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior11.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior12.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior13.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior14.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior15.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior16.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior17.jpg" style="width:100%">
+                <img class="mySlides1" src="images/interior18.jpg" style="width:100%">
+                <img class="mySlides1" src="images/wood1.jpg" style="width:100%">
+                <img class="mySlides1" src="images/wood3.jpg" style="width:100%">
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="column exterior">
+            <div class="w3-content w3-display-container">
+
+                <img class="mySlides2" src="images/exterior7.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/wood6.jpg" style="width:100%">
+                <img class="mySlides2" src="images/exterior1.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/exterior2.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/exterior3.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/exterior4.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/exterior5.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/exterior6.jpg" style="width:100%;">
+                <img class="mySlides2" src="images/wood5.jpg" style="width:100%">
+                <img class="mySlides2" src="images/wood7.jpg" style="width:100%">
+                <img class="mySlides2" src="images/wood8.jpg" style="width:100%">
+                <img class="mySlides2" src="images/wood9.jpg" style="width:100%">
+                <img class="mySlides2" src="images/wood10.jpg" style="width:100%">
+                <img class="mySlides2" src="images/wood11.jpg" style="width:100%">
+                <img class="mySlides2" src="images/wood12.jpg" style="width:100%">
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="column com">
+            <div class="w3-content w3-display-container">
+                <img class="mySlides4" src="images/commercial2.jpg" style="width:100%">
+                <img class="mySlides4" src="images/commercial1.jpg" style="width:100%">
+                <img class="mySlides4" src="images/commercial3.jpg" style="width:100%">
+                <img class="mySlides4" src="images/commercial4.jpg" style="width:100%">
+                <img class="mySlides4" src="images/commercial5.jpg" style="width:100%">
+                <img class="mySlides4" src="images/commercial6.jpg" style="width:100%;">
+                <img class="mySlides4" src="images/commercial7.jpg" style="width:100%;">
+                <img class="mySlides4" src="images/wood4.jpg" style="width:100%">
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="column stucco">
+            <div class="w3-content w3-display-container">
+                <img class="mySlides5" src="images/stucco1.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco2.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco3.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco4.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco5.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco6.jpg" style="width:100%;">
+                <img class="mySlides5" src="images/stucco7.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco8.jpg" style="width:100%;">
+                <img class="mySlides5" src="images/stucco9.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco10.jpg" style="width:100%;">
+                <img class="mySlides5" src="images/stucco11.jpg" style="width:100%">
+                <img class="mySlides5" src="images/stucco12.jpg" style="width:100%;">
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs5(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="column concrete">
+            <div class="w3-content w3-display-container">
+                <img class="mySlides6" src="images/concrete2.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete1.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete3.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete4.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete5.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete6.jpg" style="width:100%;">
+                <img class="mySlides6" src="images/concrete8.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete9.jpg" style="width:100%">
+                <img class="mySlides6" src="images/concrete10.jpg" style="width:100%;">
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs6(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs6(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w3-container w3-padding-32">
+        <h3 id="contact" class="w3-border-bottom w3-border-black w3-padding-16"><b>CONTACT</b></h3>
+        <p style="color:#FF9671;">Lets get in touch and talk about your next project.</p>
+
+
+        <div class="row">
+            <div class="container">
+                <form id="gform" method="POST"
+                      action="https://script.google.com/macros/s/AKfycbxPcaeZp5R2Y8Q9mfBHQA_zSSXEFH-wMcOMFN6fOURJ9Dskjbje/exec">
+
+                    <div class="row">
+                        <div class="col-50">
+                            <h3 style="color:#008E9B">Contact Information</h3>
+                            <label for="name"><i class="fa fa-user"></i>  Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <label for="email"><i class="fa fa-envelope"></i>  Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                            <span id="email-invalid" style="display:none;color:red;">
+                                Must be a valid email address
+                            </span>
+                            <label for="phone"><i class="fa fa-phone"></i>  Phone</label>
+                            <input type="text" id="phone" name="phone" placeholder="403 111-1111" required>
+
+                            <label for="address"><i class="fa fa-address-card-o"></i>   Address</label>
+                            <input type="text" id="address" name="address" placeholder="542 15th Street NW">
+                            <label for="city"><i class="fa fa-institution"></i>   City</label>
+                            <input type="text" id="city" name="city" placeholder="Calgary">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder="AB">
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" id="zip" name="zip" placeholder="X1X1X1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3 style="color:#008E9B">Services</h3>
+                            <label for="fname">Job Type</label>
+                            <div class="row">
+                                <div class="col-50">
+                                    <input type="checkbox" name="interior" value="interior" id="interior"> Interior<br>
+                                </div>
+                                <div class="col-50">
+                                    <input type="checkbox" name="exterior" value="exterior" id="exterior"> Exterior
+                                </div>
+                            </div>
+
+                            <label for="description">Description</label>
+                            <input type="text" id="description" name="description" placeholder="Tell us more about your needs!">
+
+                            <label for="date1">Preferred date 1</label>
+                            <input type="text" id="date1" name="date1" placeholder="MM/DD/YYYY hh:mm AM/PM">
+
+                            <label for="date2">Preferred date 2</label>
+                            <input type="text" id="date2" name="date2" placeholder="MM/DD/YYYY hh:mm AM/PM">
+
+                            <label for="date3">Preferred date 3</label>
+                            <input type="text" id="date3" name="date3" placeholder="MM/DD/YYYY hh:mm AM/PM">
+
+                            <label for="preference">Notes</label>
+                            <input type="text" id="preference" name="preference" placeholder="Any ">
+
+                        </div>
+
+                    </div>
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+                <div style="display:none;" id="thankyou_message">
+                    <h4>
+                        <em>Thanks</em> for contacting us!
+                        We will get back to you soon!
+                    </h4>
+                </div>
+                <script data-cfasync="false" type="text/javascript"
+                        src="form-submission-handler.js"></script>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/magnific.min.js"></script>
+    <h3 id="testimonial" class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>TESTIMONIALS</b></h3>
+    <p style="color:#FF9671;">What people say about us</p>
+    <div class="timelinex">
+        <div class="containerx left">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B">Daniela Ugachi</b><br /> "Friendly, punctual and skilled.
+                    I would trust these guys with all of my painting needs and probably
+                    any of the other services that they offer. They provided an accurate
+                    and fair estimate, and were fair with their price. I will use these
+                    guys again!"
+                </p>
+
+            </div>
+
+        </div>
+        <div class="containerx right">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B;"> Sandra and Chris </b><br /> "Your guys did a great job, thank you Zack,
+                    always a pleasure and I'll continue to recommend my clients to
+                    you when they need a quality paint job, always a
+                    good recommendation.
+                    Extraordinary  work! thanks guys ."
+                </p>
+
+            </div>
+        </div>
+        <div class="containerx left">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B;">hicks minham</b><br /> "I have had the privilege of competing several successful projects with
+                    tmt painting ,
+                    i have always found them to be very professional and proactive , great people , great work !"
+                </p>
+
+            </div>
+
+        </div>
+        <div class="containerx right">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B;">Meghan J.</b><br /> "These guys did an excellent job and only stopped when the rain started.
+                    They kept the area clean and orderly at all times. Thank you so much for making this experience a pleasant one! We would recommend
+                    this company to anyone thinking of doing concert, stucco, or painting on their home. Thanks to you guys, we have a brand new home!"
+                </p>
+
+            </div>
+
+        </div>
+        <div class="containerx left">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B;">kathy magrim.</b><br /> "We are very happy with the paint job, very happy – and,
+                    as I indicated before, found your whole crew very easy to have around and most accommodating. Many thanks."
+                </p>
+
+            </div>
+
+        </div>
+        <div class="containerx right">
+            <div class="contentx">
+
+                <p>
+                    <b style="color:#008E9B">Wazz Lahib</b>
+                    <br /> "I could not be more pleased with the work that zach and his team at TMT Painting completed for me at my home ,
+                    they arrived exactly when they said they would , and did an amazing job ! There was a great attention to detail on every level.
+                    Extremely professional! i would highly recommend using them on your next project!"
+                </p>
+            </div>
+
+        </div>
+        <div class="containerx left">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B">krista and jarred mecall</b><br /> "Zack, your company did a fantastic job! We are very,
+                    very pleased with the quality of your work, attention to detail,
+                    and clean up. We will definitely keep you in mind for any future work. Thank you! Thank you!"
+                </p>
+
+            </div>
+
+        </div>
+        <div class="containerx right">
+            <div class="contentx">
+                <p>
+                    <b style="color:#008E9B">Dave</b>
+                    <br /> " I just wanted to thank you again for the wonderful job you and your men did in our house. You took a very tired old
+                    house and turned it into a very beautiful, colorful and stylish home. Both Dave and I, are so happy with the job!
+                    You were very professional, clean and on time. It has been a pleasure to work with you and we will definitely recommend
+                    you to our friends and neighbors. Thank you again for a wonderful job!"
+                </p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <footer class="w3-center w3-black w3-padding-16">
+        <div class="rowx">
+            <div class="columnx">
+                <p align="center">
+                    TMT Painting<br />
+                    4008 7 ave SW,Calgary<br />
+                    Alberta, Canada<br />
+                    Fax: 403.800.1538<br />
+                    Phone: 403.333.3334<br />
+                    Email: tmtpainting1@gmail.com
+                </p>
+            </div>
+            <div class="columnx">
+                <h4>FOLLOW US</h4>
+                <a href="https://www.facebook.com/TMT-painting-1439652556180429/" style="color:white; width: 30px;" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://411.ca/business/profile/7190819" style="color:white; width: 30px;" class="fa fa-google" target="_blank"></a>
+            </div>
+        </div>
+
+    </footer>
+    <div class="rowx">
+        <div class="columny">
+            <img src="images/img1.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img2.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img3.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img4.jpg" alt="Avatar" class="avatar">
+        </div>
+    </div>
+    <div class="rowx">
+        <div class="columny">
+            <img src="images/img5.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img6.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img7.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img8.jpg" alt="Avatar" class="avatar">
+        </div>
+    </div>
+
+
+    <script src="./myscripts.js"></script>
+
+</body>
+</html>

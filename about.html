@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <title>TMT Painting</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        /* Center website */
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+
+        .row {
+            margin: 10px -16px;
+        }
+
+            /* Add padding BETWEEN each column */
+            .row,
+            .row > .column {
+                padding: 8px;
+            }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            display: none; /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #3e7cc7;
+            }
+
+            .btn.active {
+                background-color: #3e7cc7;
+                color: white;
+            }
+
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+            .active, .collapsible:hover {
+                background-color: grey;
+            }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        /* Create two equal columns that floats next to each other */
+        .columnx {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .columny {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            text-align: center;
+            color: black;
+        }
+        /* Clear floats after the columns */
+        .rowx:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 80%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: black;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: black;
+            color: white;
+        }
+
+        .fa-google {
+            background: black;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: black;
+            color: white;
+        }
+
+
+
+        .fa-instagram {
+            background: black;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: black;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            height: 10px;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            /*border-radius: 50%;*/
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            height: 50%;
+            margin-top: 0px;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            .overlay-content {
+                position: relative;
+                top: 20%;
+                width: 50%;
+                height: 50%;
+                margin-top: 20px;
+                margin: auto;
+            }
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+            cursor: pointer;
+            color: white;
+        }
+
+            .overlay .closebtn:hover {
+                color: #ccc;
+            }
+
+        .overlay input[type=text] {
+            padding: 15px;
+            font-size: 17px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: white;
+        }
+
+            .overlay input[type=text]:hover {
+                background: #f1f1f1;
+            }
+
+        .overlay button {
+            float: left;
+            width: 20%;
+            padding: 15px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+            .overlay button:hover {
+                background: #bbb;
+            }
+    </style>
+</head>
+
+<body>
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <img src="images/logo.png" />
+        </div>
+    </div>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a class="w3-bar-item w3-button" ><img src="images/logo.png" style="width:30px;height:30px;" /><b>TMT Painting</b></a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button"><b>Home</b></a>
+                <!--<a href="about.html" class="w3-bar-item w3-button">Profile</a>-->
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="margin-bottom:50px;max-width:1500px" id="home">
+       
+    </header>
+    <div class="w3-content w3-padding" style="max-width:1564px">
+        <div >
+            <p style="font-size:20px;">
+                Welcome to TMT PAINTING INC.
+                <br />
+                With over 20 years in the painting market, we have the expertise to carry out your interior and exterior painting to the highest standers.We work closely with major paint companies and where necessary, we obtain free specifications and colour schemes to ensure our clients are happy with the products used on there home. We pride our selves on our attention to detail and we are committed to ensuring that you are satisfied with the results.
+                <br />
+                TMT PAINTING  provides a high quality painting and decorating service to both residential and commercial clients across the calgary area.
+                <br />
+                Our clients include
+                      <br />   •	Residential home owners
+                      <br />  •	Building owners
+                      <br />  •	Property developers
+                      <br />  •	Construction companies
+                      <br />  TMT PAINTING is a registered member of the BBB. We pride ourselves in our personalised service to ensure customer satisfaction. This is reflected in the growth of our business and the referrals we receive from our satisfied customers.
+
+                      <br />     We do all aspects of special coatings and wall coverings. we specialize in staining , glazing, lacquering and wood finishing. we have expertise in total project management which includes special paint effects, paper hanging and colour matching.
+            </p>
+        </div>
+        <button style="font-size:20px;color:#FF9671;" class="collapsible">Values &#x226B;</button>
+        <div class="content">
+            <p style="font-size:20px;">
+                Quality - our tradespeople are some of the most experienced available. This ensures that all our projects include thorough preparation, application and inspections. We access only quality products, which includes full technical support from the paint manufacturers.
+                <br /><br />
+                Professionalism - our trained team which includes administration, ensures that our projects work on time, scope and budget. Working well as a team, we are efficient when we are on site and will leave sites tidy on completion. Our team is the core of our company.
+                <br /><br />
+                Reliability - We are able to quote any work that you wish to undertake. This will include time required for the job and our availability to start. Once on site, we will work efficiently to meet these timeframes. We do what we say we will do.
+                <br /><br />
+                We respond quickly to any problems that may arise, or any additional work that may be required.
+                <br /><br />
+                There will be examples of our work in your neighbourhood. If you would like to see some of our work, please contact us, and we can suggest some sites for you to view.
+                <br /><br />
+                Safety - We take great care to ensure that all our sites are safe and follow all safety guidelines and procedures. Our staff are trained in the use or removal of any hazardous products and will dispose of these materials safely. We are a member of Site Safe.
+                <br /><br />
+                We will provide you with a written quote for your work. This will include the scope of the work that we have discussed. This will cover
+                <br /> •	surfaces to be painted
+                <br />  •	type of preparation
+                <br /> •	products to be used
+                <br /> •	timeframes for the project
+                <br />   •	methods of payment
+                <br />    We guarantee our work which includes our workmanship. Any product guarantees will be as per the manufacturers specifications.
+            </p>
+        </div>
+        <button style="font-size:20px;color:#FF9671;" class="collapsible">Mission &#x226B;</button>
+        <div class="content">
+            <p style="font-size:20px;">
+                Our mission is to raise the bar of excellence in the industry with fashionable and creative home remodelling services, and re-define the image of regular painting.
+                <br />   We want to be market leaders , by providing our clients with topnotch quality at competitive rates .
+            </p>
+        </div>
+    </div>
+    <footer class="w3-center w3-black w3-padding-16">
+        <div class="rowx">
+            <div class="columnx">
+                <p align="center">
+                    TMT Painting<br />
+                    4008 7 ave SW,Calgary<br />
+                    Alberta, Canada<br />
+                    Fax: 403.800.1538<br />
+                    Phone: 403.333.3334<br />
+                    Email: tmtpainting1@gmail.com
+                </p>
+            </div>
+            <div class="columnx">
+                <h4>Connect with us!!</h4>
+                <a href="https://www.facebook.com/TMT-painting-1439652556180429/" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://411.ca/business/profile/7190819" class="fa fa-google" target="_blank"></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="rowx">
+        <div class="columny">
+            <img src="images/img1.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img2.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img3.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img4.jpg" alt="Avatar" class="avatar">
+        </div>
+    </div>
+    <div class="rowx">
+        <div class="columny">
+            <img src="images/img5.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img6.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img7.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="columny">
+            <img src="images/img8.jpg" alt="Avatar" class="avatar">
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+         function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+        }
+        function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
